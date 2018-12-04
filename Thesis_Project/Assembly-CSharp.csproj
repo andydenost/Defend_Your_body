@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\BCell.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HookCatch.cs" />
+    <Compile Include="Assets\Scripts\HumanBodyStatus.cs" />
     <Compile Include="Assets\Scripts\PlayerControler.cs" />
     <Compile Include="Assets\Scripts\SwitchCharacter.cs" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">

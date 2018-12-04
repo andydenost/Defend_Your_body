@@ -26,6 +26,9 @@ public class PlayerControler : MonoBehaviour {
 
     public float movingSpeed = 1F;
 
+    private Vector3 forward;
+
+
     Quaternion originalRotation;
 
     void Start()
@@ -43,11 +46,13 @@ public class PlayerControler : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            this.transform.Translate(Vector3.forward * movingSpeed * Time.deltaTime);
+            forward = transform.forward;
+            forward.y = 0;
+            this.transform.Translate(forward * movingSpeed * Time.deltaTime ,Space.World);
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            this.transform.Translate(Vector3.forward * -movingSpeed * Time.deltaTime);
+            this.transform.Translate(forward * -movingSpeed * Time.deltaTime, Space.World);
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
