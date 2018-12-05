@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23614342346069416}
   - component: {fileID: 135217252813146160}
   - component: {fileID: 114954837581355912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Macrophage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4858971402584988}
   - component: {fileID: 33268023965461994}
   - component: {fileID: 23255753533954362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: claw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 33653962993570344}
   - component: {fileID: 23620459678185738}
   - component: {fileID: 136868752997130886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
