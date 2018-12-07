@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\AntiAttack.cs" />
     <Compile Include="Assets\Scripts\AntigenShooting.cs" />
     <Compile Include="Assets\Scripts\BCell.cs" />
+    <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HookCatch.cs" />
     <Compile Include="Assets\Scripts\HumanBodyStatus.cs" />

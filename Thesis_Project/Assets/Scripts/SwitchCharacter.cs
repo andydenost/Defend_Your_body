@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SwitchCharacter : MonoBehaviour {
 
-    public GameObject[] playerPrefab;
     public GameObject[] player;
     public Camera characterCamera;
     [SerializeField]
@@ -14,8 +13,6 @@ public class SwitchCharacter : MonoBehaviour {
     {
         for (int i=0;i<3;i++)
         {
-            //instantiate all characters and set them inactive
-            player[i] = Instantiate(playerPrefab[i]);
 
             player[i].SetActive(false);
  
@@ -38,7 +35,7 @@ public class SwitchCharacter : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             CharcaterCount++;
-            if (CharcaterCount >= playerPrefab.Length)
+            if (CharcaterCount >= player.Length)
             {
                 CharcaterCount = 0;
             }

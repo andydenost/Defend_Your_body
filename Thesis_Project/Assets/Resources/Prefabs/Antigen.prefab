@@ -326,5 +326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   antiSpeed: 500
-  player: {fileID: 1197262795328196, guid: 6593747cce56f0748b5ccf0cdc10c982, type: 2}
+  player: {fileID: 0}
   rotateSpeed: 500
+  playerSpeed: {x: 0, y: 0, z: 0}

@@ -18,9 +18,7 @@ public class BCell : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             bullet = Instantiate(goBullet);
-            bullet.transform.position = this.transform.position;
-            Debug.Log(this.transform.position);
-            Debug.Log(bullet.transform.position);
+            bullet.transform.position = transform.position;
             //bullet.transform.parent = this.transform;
             //bullet.transform.SetParent(this.transform);
         }

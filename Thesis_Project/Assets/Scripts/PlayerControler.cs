@@ -28,17 +28,24 @@ public class PlayerControler : MonoBehaviour {
 
     private Vector3 forward;
 
+    private Vector3 prevPos;
+    private Vector3 curPos;
+    public Vector3 playerVelocity;
+
 
     Quaternion originalRotation;
 
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
-        if (rb)
-        {
-            rb.freezeRotation = true;
-            originalRotation = transform.localRotation;
-        }     
+          rb = this.GetComponent<Rigidbody>();
+          if (rb)
+          {
+              rb.freezeRotation = true;
+              originalRotation = transform.localRotation;
+          }   
+        originalRotation = transform.localRotation;
+        prevPos = transform.position;
+        curPos = transform.position;
     }
 
 
@@ -52,6 +59,8 @@ public class PlayerControler : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
+            forward = transform.forward;
+            forward.y = 0;
             this.transform.Translate(forward * -movingSpeed * Time.deltaTime, Space.World);
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -92,6 +101,10 @@ public class PlayerControler : MonoBehaviour {
             Quaternion yQuaternion = Quaternion.AngleAxis(rotationY, Vector3.left);
             transform.localRotation = originalRotation * yQuaternion;
         }
+        curPos = transform.position;
+        playerVelocity = (curPos - prevPos)/Time.fixedDeltaTime;
+        prevPos = curPos;
+        //Debug.Log(playerVelocity);
     }
 
     public static float ClampAngle(float angle, float min, float max)
