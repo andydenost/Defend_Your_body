@@ -7,7 +7,7 @@ public class SwitchCharacter : MonoBehaviour {
     public GameObject[] player;
     public Camera characterCamera;
     [SerializeField]
-    private int CharcaterCount = 0;
+    public int CharcaterCount = 0;
 
     void Start()
     {
