@@ -76,6 +76,6 @@ public class FortBuilder : MonoBehaviour {
             fortCell = MCellFort;
             pos.y = pos.y + 1.5f;
         }
-        GameObject myfort = Instantiate(fortCell, pos, Quaternion.LookRotation(dir,Vector3.up));
+        Instantiate(fortCell, pos, Quaternion.LookRotation(dir,Vector3.up));
     }
 }

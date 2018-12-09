@@ -49,7 +49,7 @@ public class SwitchCharacter : MonoBehaviour {
                     player[0].SetActive(true);
                     player[1].SetActive(false);
                     player[2].SetActive(false);
-                    characterCamera.transform.localPosition = new Vector3(0f,1f,-1.5f);
+                    characterCamera.transform.localPosition = new Vector3(0f,0.6f,-2f);
                 }
                 break;
             case 1:
@@ -58,7 +58,7 @@ public class SwitchCharacter : MonoBehaviour {
                     player[0].SetActive(false);
                     player[1].SetActive(true);
                     player[2].SetActive(false);
-                    characterCamera.transform.localPosition = new Vector3(0f, 1f, -1.5f);
+                    characterCamera.transform.localPosition = new Vector3(0f, 0.6f, -2f);
 
                 }
                 break;
@@ -68,7 +68,7 @@ public class SwitchCharacter : MonoBehaviour {
                     player[0].SetActive(false);
                     player[1].SetActive(false);
                     player[2].SetActive(true);
-                    characterCamera.transform.localPosition = new Vector3(0f, 2f, -3f);
+                    characterCamera.transform.localPosition = new Vector3(0f, 1.2f, -4f);
 
                 }
                 break;
