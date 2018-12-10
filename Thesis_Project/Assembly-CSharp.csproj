@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\BCell.cs" />
     <Compile Include="Assets\Scripts\BCellFort.cs" />
     <Compile Include="Assets\Scripts\BFortAntigen.cs" />
+    <Compile Include="Assets\Scripts\ClawScript.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\FortBuilder.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\MiniIcon.cs" />
     <Compile Include="Assets\Scripts\MiniMapScript.cs" />
     <Compile Include="Assets\Scripts\PlayerControler.cs" />
+    <Compile Include="Assets\Scripts\SightRayManager.cs" />
     <Compile Include="Assets\Scripts\SwitchCharacter.cs" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/lhy19/OneDrive/Documents/GitHub/Defend_Your_body/Thesis_Project/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>

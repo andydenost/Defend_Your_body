@@ -7,9 +7,9 @@ public class HumanBodyStatus : MonoBehaviour {
     //public static HumanBodyStatus _humanBodyStatus;
     public static HumanBodyStatus humanBodyStatus { get; private set; }
 
-    private int bodyHealth;
-    private int bodyImmunityIncrease;
-    private int bodyImmunity;
+    public int bodyHealth;
+    private  int bodyImmunityIncrease;
+    public int bodyImmunity;
     private float IHfactor;
 
     // Use this for initialization

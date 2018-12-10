@@ -277,7 +277,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &65203197026860278
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -325,7 +325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a7854a5c5f6594da9b47398c9b869f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  antiSpeed: 500
-  player: {fileID: 0}
+  antiSpeed: 12
   rotateSpeed: 500
   playerSpeed: {x: 0, y: 0, z: 0}
+  explosionEffect: {fileID: 1493847081644970, guid: 8fc1a5d279b3fca49800c0cd7d009e1f,
+    type: 2}

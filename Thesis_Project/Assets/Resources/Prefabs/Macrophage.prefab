@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 4858971402584988}
   - component: {fileID: 33268023965461994}
   - component: {fileID: 23255753533954362}
+  - component: {fileID: 135820159635030314}
   m_Layer: 9
   m_Name: claw
   m_TagString: Untagged
@@ -58,6 +59,7 @@ GameObject:
   - component: {fileID: 33653962993570344}
   - component: {fileID: 23620459678185738}
   - component: {fileID: 136868752997130886}
+  - component: {fileID: 136156302409294002}
   m_Layer: 9
   m_Name: arm
   m_TagString: Untagged
@@ -243,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195ee9875590d11498eb44c0885321a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   claw: {fileID: 1344367902852374}
   arm: {fileID: 1544308798842084}
   clawSpeed: 40
@@ -259,6 +262,31 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135820159635030314
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344367902852374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136156302409294002
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544308798842084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 0
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136868752997130886
 CapsuleCollider:

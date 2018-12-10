@@ -12,6 +12,7 @@ public class FortBuilder : MonoBehaviour {
     public Vector3 direction3;
     public Vector3 direction4;
     public Vector3 fortPos;
+    public float maxDistanceBuild;
 
     private int fortIndex;
     Ray ray;
@@ -28,40 +29,42 @@ public class FortBuilder : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (Input.GetButtonDown("Fire1") == true)
+        if (Input.GetKeyDown("e"))
         {
             fortIndex = gameObject.GetComponent<SwitchCharacter>().CharcaterCount;
-            ray = characterCamera.ScreenPointToRay(Input.mousePosition);
+            ray = SightRayManager.Sight.ray;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.name == "Fort1")
+                if (Vector3.Distance(hit.transform.position,transform.position) < maxDistanceBuild)
                 {
-                    fortPos = hit.collider.transform.position;
-                    
-                    BuildFort(fortIndex, fortPos, direction1);
-                }
-                if (hit.collider.name == "Fort2")
-                {
-                    fortPos = hit.collider.transform.position;
+                    if (hit.collider.name == "Fort1")
+                    {
+                        fortPos = hit.collider.transform.position;
 
-                    BuildFort(fortIndex, fortPos, direction2);
-                }
-                if (hit.collider.name == "Fort3")
-                {
-                    fortPos = hit.collider.transform.position;
+                        BuildFort(fortIndex, fortPos, direction1);
+                    }
+                    if (hit.collider.name == "Fort2")
+                    {
+                        fortPos = hit.collider.transform.position;
 
-                    BuildFort(fortIndex, fortPos, direction3);
-                }
-                if (hit.collider.name == "Fort4")
-                {
-                    fortPos = hit.collider.transform.position;
+                        BuildFort(fortIndex, fortPos, direction2);
+                    }
+                    if (hit.collider.name == "Fort3")
+                    {
+                        fortPos = hit.collider.transform.position;
 
-                    BuildFort(fortIndex, fortPos, direction4);
+                        BuildFort(fortIndex, fortPos, direction3);
+                    }
+                    if (hit.collider.name == "Fort4")
+                    {
+                        fortPos = hit.collider.transform.position;
+
+                        BuildFort(fortIndex, fortPos, direction4);
+                    }
                 }
             }
         }
-        
-        
+  
 	}
 
     void BuildFort(int index, Vector3 pos, Vector3 dir)
