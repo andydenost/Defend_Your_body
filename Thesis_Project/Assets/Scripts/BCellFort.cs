@@ -12,21 +12,22 @@ public class BCellFort : MonoBehaviour {
     public List<GameObject> enemies;
     public float attackInterval;
     private float timer;
-
+    public int immunity;
 
     // Use this for initialization
     void Start () {
         enemies = new List<GameObject>();
         attackInterval = 1f;
         timer = 0;
+        immunity = 10;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
         timer += Time.deltaTime;
-        
-        foreach (GameObject em in enemies)
+
+        foreach (GameObject em in enemies.ToArray())
         {
             if (Vector3.Angle(transform.forward, em.transform.position - transform.position) > 45)
             {
@@ -36,12 +37,27 @@ public class BCellFort : MonoBehaviour {
         }
         //.Log(timer);
 
-        if (timer >= attackInterval && enemies.Count > 0)
+        if (timer >= attackInterval && enemies.Count > 0 && immunity > 0)
         {
             Debug.Log(Time.realtimeSinceStartup);
-            attackPathogen(enemies[0].transform);
+            if (enemies[0]!=null)
+            {
+                attackPathogen(enemies[0].transform);
+            }
+            else
+            {
+                enemies.Remove(enemies[0]);
+            }
             timer = 0;
+        }else if (immunity == 0)
+        {
+            enemies.Remove(gameObject);
+            Destroy(gameObject);
+            GameObject effect = transform.parent.Find("ReadyEffect").gameObject;
+            effect.SetActive(true);
         }
+
+        
 
     }
 
@@ -68,6 +84,7 @@ public class BCellFort : MonoBehaviour {
 
     void attackPathogen(Transform target)
     {
+        immunity--;
         BFAnti = Instantiate(BFAPrefab, transform.position, transform.rotation);
         BFAnti.GetComponent<BFortAntigen>().Target = target;
     }

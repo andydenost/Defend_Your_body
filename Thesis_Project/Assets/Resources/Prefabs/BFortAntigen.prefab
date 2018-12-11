@@ -326,3 +326,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   antiSpeed: 10
+  explosionEffect: {fileID: 1493847081644970, guid: 8fc1a5d279b3fca49800c0cd7d009e1f,
+    type: 2}

@@ -39,27 +39,43 @@ public class FortBuilder : MonoBehaviour {
                 {
                     if (hit.collider.name == "Fort1")
                     {
-                        fortPos = hit.collider.transform.position;
-
-                        BuildFort(fortIndex, fortPos, direction1);
+                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                        if (readyEffect.activeSelf == true)
+                        {
+                            fortPos = hit.collider.transform.position;
+                            BuildFort(fortIndex, fortPos, direction1);
+                            readyEffect.SetActive(false);
+                        }  
                     }
                     if (hit.collider.name == "Fort2")
                     {
-                        fortPos = hit.collider.transform.position;
-
-                        BuildFort(fortIndex, fortPos, direction2);
+                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                        if (readyEffect.activeSelf == true)
+                        {
+                            fortPos = hit.collider.transform.position;
+                            BuildFort(fortIndex, fortPos, direction2);
+                            readyEffect.SetActive(false);
+                        }
                     }
                     if (hit.collider.name == "Fort3")
                     {
-                        fortPos = hit.collider.transform.position;
-
-                        BuildFort(fortIndex, fortPos, direction3);
+                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                        if (readyEffect.activeSelf == true)
+                        {
+                            fortPos = hit.collider.transform.position;
+                            BuildFort(fortIndex, fortPos, direction3);
+                            readyEffect.SetActive(false);
+                        }
                     }
                     if (hit.collider.name == "Fort4")
                     {
-                        fortPos = hit.collider.transform.position;
-
-                        BuildFort(fortIndex, fortPos, direction4);
+                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                        if (readyEffect.activeSelf == true)
+                        {
+                            fortPos = hit.collider.transform.position;
+                            BuildFort(fortIndex, fortPos, direction4);
+                            readyEffect.SetActive(false);
+                        }
                     }
                 }
             }
@@ -79,6 +95,7 @@ public class FortBuilder : MonoBehaviour {
             fortCell = MCellFort;
             pos.y = pos.y + 1.5f;
         }
-        Instantiate(fortCell, pos, Quaternion.LookRotation(dir,Vector3.up));
+        GameObject f = Instantiate(fortCell, pos, Quaternion.LookRotation(dir,Vector3.up));
+        f.transform.SetParent(hit.transform);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BFortAntigen : MonoBehaviour {
 
     public float antiSpeed;
+    public GameObject explosionEffect;
     private Transform target;
     public Transform Target
     {
@@ -21,7 +22,22 @@ public class BFortAntigen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(target.position);
-        transform.Translate(Vector3.forward * antiSpeed * Time.deltaTime);
+        if (target != null)
+        {
+            transform.LookAt(target.position);
+            transform.Translate(Vector3.forward * antiSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.forward * antiSpeed * Time.deltaTime);
+        }
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+        GameObject effect = Instantiate(explosionEffect, transform.position, transform.rotation);
+        Destroy(effect, 0.4f);
+    }
+
 }

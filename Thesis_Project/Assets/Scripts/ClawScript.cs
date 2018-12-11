@@ -10,17 +10,17 @@ public class ClawScript : MonoBehaviour {
 
     private float distance;
 
-    public GameObject pathogen;
+    public List<GameObject> pathogen;
 	// Use this for initialization
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Pathogen")
         {
-            pathogen = collision.gameObject;
+            pathogen.Add(collision.gameObject);
             pathogenCathing = true;
-            pathogen.transform.parent = transform;
-            pathogen.layer = 9;
+            collision.gameObject.transform.parent = transform;
+            collision.gameObject.layer = 12;
         }
         macrophage.GetComponent<HookCatch>().clawMoveState = 1;
 
@@ -29,9 +29,17 @@ public class ClawScript : MonoBehaviour {
     private void Update()
     {
         distance = Vector3.Distance(transform.position, macrophage.transform.position);
-        if (distance == 0 && pathogenCathing==true)
+        //Debug.Log("d "+distance);
+
+        if (distance < 0.01 && pathogenCathing==true)
         {
-            Destroy(pathogen);
+            Debug.Log("?");
+            foreach (GameObject p in pathogen.ToArray())
+            {
+                pathogen.Remove(p);
+                Destroy(p);  
+            }
+            
             pathogenCathing = false;
         }
     }

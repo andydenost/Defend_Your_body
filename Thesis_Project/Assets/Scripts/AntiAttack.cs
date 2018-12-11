@@ -17,8 +17,10 @@ public class AntiAttack : MonoBehaviour {
                 
             if (T_Animation["Forkattack"].normalizedTime > 0.99f)
             {
+
                 T_Animation["Forkattack"].speed = 0;
                 Debug.Log("attack?");
+
             }
             else
             {
@@ -32,5 +34,12 @@ public class AntiAttack : MonoBehaviour {
         }
         
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+          
+    }
+
+
 
 }
