@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class FortBuilder : MonoBehaviour {
     public Camera characterCamera;
-    public GameObject fortCell;
+    private GameObject fortCell;
     public GameObject BCellFort;
+    public GameObject TCellFort;
     public GameObject MCellFort;
     public Vector3 direction1;
     public Vector3 direction2;
@@ -29,58 +30,77 @@ public class FortBuilder : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (Input.GetKeyDown("e"))
-        {
-            fortIndex = gameObject.GetComponent<SwitchCharacter>().CharcaterCount;
-            ray = SightRayManager.Sight.ray;
-            if (Physics.Raycast(ray, out hit))
+        
+         fortIndex = gameObject.GetComponent<SwitchCharacter>().CharcaterCount;
+         ray = SightRayManager.Sight.ray;
+         if (Physics.Raycast(ray, out hit))
+         {
+            if (Vector3.Distance(hit.transform.position,transform.position) < maxDistanceBuild)//only build when around fort
             {
-                if (Vector3.Distance(hit.transform.position,transform.position) < maxDistanceBuild)
+                if (Input.GetKeyDown("e"))
                 {
-                    if (hit.collider.name == "Fort1")
+                    if (fortIndex == 0|| fortIndex == 2)
                     {
-                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
-                        if (readyEffect.activeSelf == true)
+                        if (hit.collider.name == "Fort1")
                         {
-                            fortPos = hit.collider.transform.position;
-                            BuildFort(fortIndex, fortPos, direction1);
-                            readyEffect.SetActive(false);
-                        }  
-                    }
-                    if (hit.collider.name == "Fort2")
-                    {
-                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
-                        if (readyEffect.activeSelf == true)
+                            GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                            if (readyEffect.activeSelf == true)
+                            {
+                                fortPos = hit.collider.transform.position;
+                                BuildFort(fortIndex, fortPos, direction1);
+                                readyEffect.SetActive(false);
+                            }
+                        }
+                        if (hit.collider.name == "Fort2")
                         {
-                            fortPos = hit.collider.transform.position;
-                            BuildFort(fortIndex, fortPos, direction2);
-                            readyEffect.SetActive(false);
+                            GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                            if (readyEffect.activeSelf == true)
+                            {
+                                fortPos = hit.collider.transform.position;
+                                BuildFort(fortIndex, fortPos, direction2);
+                                readyEffect.SetActive(false);
+                            }
+                        }
+                        if (hit.collider.name == "Fort3")
+                        {
+                            GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                            if (readyEffect.activeSelf == true)
+                            {
+                                fortPos = hit.collider.transform.position;
+                                BuildFort(fortIndex, fortPos, direction3);
+                                readyEffect.SetActive(false);
+                            }
+                        }
+                        if (hit.collider.name == "Fort4")
+                        {
+                            GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                            if (readyEffect.activeSelf == true)
+                            {
+                                fortPos = hit.collider.transform.position;
+                                BuildFort(fortIndex, fortPos, direction4);
+                                readyEffect.SetActive(false);
+                            }
                         }
                     }
-                    if (hit.collider.name == "Fort3")
+                }
+                if (Input.GetKeyDown("r"))
+                {
+                    if (fortIndex == 1)
                     {
-                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
-                        if (readyEffect.activeSelf == true)
+                        if (hit.collider.name == "TCellFortQuad")
                         {
-                            fortPos = hit.collider.transform.position;
-                            BuildFort(fortIndex, fortPos, direction3);
-                            readyEffect.SetActive(false);
-                        }
-                    }
-                    if (hit.collider.name == "Fort4")
-                    {
-                        GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
-                        if (readyEffect.activeSelf == true)
-                        {
-                            fortPos = hit.collider.transform.position;
-                            BuildFort(fortIndex, fortPos, direction4);
-                            readyEffect.SetActive(false);
+                            GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
+                            if (readyEffect.activeSelf == true)
+                            {
+                                fortPos = hit.collider.transform.position;
+                                BuildFort(fortIndex, fortPos, Vector3.left);
+                                readyEffect.SetActive(false);
+                            }
                         }
                     }
                 }
             }
         }
-  
 	}
 
     void BuildFort(int index, Vector3 pos, Vector3 dir)
@@ -89,6 +109,10 @@ public class FortBuilder : MonoBehaviour {
         {
             fortCell = BCellFort;
             pos.y = pos.y + 0.8f;
+        }
+        else if(index == 1){
+            fortCell = TCellFort;
+            pos.y = pos.y + 0.6f;
         }
         else if (index == 2)
         {

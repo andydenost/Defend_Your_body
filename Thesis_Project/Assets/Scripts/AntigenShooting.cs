@@ -29,7 +29,8 @@ public class AntigenShooting : MonoBehaviour {
             playerSpeed = player.GetComponent<PlayerControler>().playerVelocity;
            // Debug.Log("ps"+playerSpeed);
             gameObject.GetComponent<Rigidbody>().velocity = playerSpeed;
-           // Debug.Log(gameObject.GetComponent<Rigidbody>().velocity);
+        // Debug.Log(gameObject.GetComponent<Rigidbody>().velocity);
+            gameObject.transform.rotation = player.transform.rotation;
             gameObject.GetComponent<Rigidbody>().AddForce(shootingDirection * antiSpeed * 100);
            // Debug.Log(gameObject.GetComponent<Rigidbody>().velocity);
          }

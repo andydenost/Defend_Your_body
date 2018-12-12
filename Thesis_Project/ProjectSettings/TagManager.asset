@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pathogen
   - FortCell
+  - Stage
   layers:
   - Default
   - TransparentFX
@@ -20,10 +21,10 @@ TagManager:
   - Arms
   - MiniMap
   - Food
-  - 
-  - 
-  - 
-  - 
+  - BodyEnvironment
+  - Enemy
+  - ImmuneCell
+  - AntiFork
   - 
   - 
   - 
