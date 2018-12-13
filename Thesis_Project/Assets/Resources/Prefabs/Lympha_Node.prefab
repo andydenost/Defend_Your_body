@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 198094709387895162}
   - component: {fileID: 199960995600015256}
   m_Layer: 0
-  m_Name: ReadEffect
+  m_Name: ReadyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 198040013557868298}
   - component: {fileID: 199149959909762316}
   m_Layer: 0
-  m_Name: ReadEffect
+  m_Name: ReadyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 198468331140518140}
   - component: {fileID: 199062890687591310}
   m_Layer: 0
-  m_Name: ReadEffect
+  m_Name: ReadyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,7 +257,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684456539786848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -21.22}
+  m_LocalPosition: {x: 28.956064, y: 0.20464921, z: -1.5}
   m_LocalScale: {x: 8, y: 0.5, z: 8}
   m_Children:
   - {fileID: 4714147746291810}

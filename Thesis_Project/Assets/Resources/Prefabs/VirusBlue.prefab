@@ -1831,10 +1831,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4670768665005054}
-  - component: {fileID: 111429585858694032}
+  - component: {fileID: 195506340027662548}
+  - component: {fileID: 136769567113410804}
+  - component: {fileID: 114944085115242724}
   m_Layer: 0
   m_Name: VirusBlue
-  m_TagString: Untagged
+  m_TagString: Pathogen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3529,7 +3531,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860910744125320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.761887, y: 0.51, z: -0.64332974}
+  m_LocalPosition: {x: 40.484337, y: 1.487, z: -1.2547245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4981024713683654}
@@ -4206,22 +4208,36 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!111 &111429585858694032
-Animation:
+--- !u!114 &114944085115242724
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860910744125320}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 1e350a75f9f81c248b0bc8a951629d49, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 1e350a75f9f81c248b0bc8a951629d49, type: 3}
-  - {fileID: 7400002, guid: 1e350a75f9f81c248b0bc8a951629d49, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1fbe63e00c02d4ca9858f90e0cfed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 0
+  PI:
+    HP: 0
+    pathoPrefab: {fileID: 0}
+  targetlist: []
+  pathoSpeed: 0
+--- !u!136 &136769567113410804
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860910744125320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.55
+  m_Height: 1.35
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.53, z: 0}
 --- !u!137 &137041780725524208
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -4838,3 +4854,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0067636296, y: -0.02660209, z: -0.28977686}
     m_Extent: {x: 0.17256671, y: 0.16644488, z: 0.29096055}
   m_DirtyAABB: 0
+--- !u!195 &195506340027662548
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860910744125320}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

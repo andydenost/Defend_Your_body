@@ -7,6 +7,8 @@ TagManager:
   - Pathogen
   - FortCell
   - Stage
+  - EndPoint
+  - Organs
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - Enemy
   - ImmuneCell
   - AntiFork
-  - 
+  - SpawnPoint
   - 
   - 
   - 

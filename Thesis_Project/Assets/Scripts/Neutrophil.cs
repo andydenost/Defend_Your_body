@@ -11,6 +11,7 @@ public class Neutrophil : MonoBehaviour {
     private GameObject nearestEnemy;
     NavMeshAgent agent;
     public GameObject neuExpEffect;
+    
 	// Use this for initialization
 	void Start () {
         nearestDistance = detectRadius;
@@ -38,17 +39,13 @@ public class Neutrophil : MonoBehaviour {
             agent.enabled = true;
             agent.destination = nearestEnemy.transform.position;
         }
-
-
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Pathogen")
         {
-
             //damage pathogen
-            
             Destroy(gameObject);
             GameObject effect = Instantiate(neuExpEffect, transform.position, transform.rotation);
             Destroy(effect, 0.4f);

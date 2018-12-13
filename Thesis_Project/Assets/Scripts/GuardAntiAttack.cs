@@ -17,6 +17,7 @@ public class GuardAntiAttack : MonoBehaviour {
     private bool hasEnemy;
     
 
+
     // Use this for initialization
     void Start () {
         T_Animation = gameObject.GetComponentInChildren<Animation>();
@@ -46,7 +47,7 @@ public class GuardAntiAttack : MonoBehaviour {
             }
         if (hasEnemy == false)
         {
-            nearestEnemy = null;
+           nearestEnemy = null;
            nearestDistance = detectRadius;
 
         }
@@ -55,17 +56,7 @@ public class GuardAntiAttack : MonoBehaviour {
         {
             agent.enabled = true;
             agent.destination = nearestEnemy.transform.position;
-        }
-        else
-        {
-            agent.destination = guardPoint.transform.position;
-        }
-        if (transform.position == guardPoint.transform.position)
-        {
-            agent.enabled = false;
-        }
-        if (nearestEnemy != null)
-        {
+            transform.LookAt(nearestEnemy.transform);
             if (Vector3.Distance(transform.position, nearestEnemy.transform.position) < attackRadius)
             {
                 T_Animation.Play("Forkattack");
@@ -77,6 +68,18 @@ public class GuardAntiAttack : MonoBehaviour {
                 {
                     isEffectiveAttack = false;
                 }
+            }
+        }
+        else
+        {
+            if (transform.position.x == guardPoint.transform.position.x && transform.position.z == guardPoint.transform.position.z)
+            {
+                agent.enabled = false;
+            }
+            else
+            {
+                agent.destination = guardPoint.transform.position;
+
             }
         }
         

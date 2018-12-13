@@ -39,7 +39,7 @@ public class FortBuilder : MonoBehaviour {
             {
                 if (Input.GetKeyDown("e"))
                 {
-                    if (fortIndex == 0|| fortIndex == 2)
+                    if (fortIndex == 0)
                     {
                         if (hit.collider.name == "Fort1")
                         {
@@ -113,11 +113,6 @@ public class FortBuilder : MonoBehaviour {
         else if(index == 1){
             fortCell = TCellFort;
             pos.y = pos.y + 0.6f;
-        }
-        else if (index == 2)
-        {
-            fortCell = MCellFort;
-            pos.y = pos.y + 1.5f;
         }
         GameObject f = Instantiate(fortCell, pos, Quaternion.LookRotation(dir,Vector3.up));
         f.transform.SetParent(hit.transform);

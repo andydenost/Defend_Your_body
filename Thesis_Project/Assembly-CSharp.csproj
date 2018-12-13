@@ -76,11 +76,16 @@
     <Compile Include="Assets\Scripts\NavigateDemo.cs" />
     <Compile Include="Assets\Scripts\Neutrophil.cs" />
     <Compile Include="Assets\Scripts\NeutrophilGenerator.cs" />
+    <Compile Include="Assets\Scripts\PathogenInfo.cs" />
+    <Compile Include="Assets\Scripts\PathogenScript.cs" />
+    <Compile Include="Assets\Scripts\PathogenSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerControler.cs" />
     <Compile Include="Assets\Scripts\SightRayManager.cs" />
     <Compile Include="Assets\Scripts\SwitchCharacter.cs" />
     <Compile Include="Assets\Scripts\TCell.cs" />
     <Compile Include="Assets\Scripts\TcellFort.cs" />
+    <Compile Include="Assets\Scripts\Wave.cs" />
+    <Compile Include="Assets\Scripts\WaveManager.cs" />
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/lhy19/OneDrive/Documents/GitHub/Defend_Your_body/Thesis_Project/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
