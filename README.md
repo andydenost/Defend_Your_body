@@ -10,7 +10,7 @@ After knowing these background knowledge, I was inspired to make these four immu
 B Cell can shoot antibody to the air. When the antibody to the air, it is like a Y character, which is the abstract feature of real antibody. When the antibody collide with pathogen, it will cause some damage to pathogen. The antibody stops and explodes only when it is hit with something.  
 ![](Images/BCell.png)    
 ### T Cell
-It has a fork inside the body, when it meet an antibody, it will stab the fork into the enemy's body to cause a huge damage. In the real world in may looks like the picture, kind like full of forks on the surface of cell.
+It has a fork inside the body, when it meet an antibody, it will stab the fork into the enemy's body to cause a huge damage. In the real world in may looks like the picture, kind like full of forks on the surface of cell.  
 ![](Images/TCell.png)  
 ### Macrophage
 Double size of B Cell and T Cell, it could also extend a part of his body like picture to catch the small pathogen. It just like a hook, to throw forward to catch a prey and pull back to get it. When it gets the pathogen, it will eat it and help B fort to upgrade its ATK.  
