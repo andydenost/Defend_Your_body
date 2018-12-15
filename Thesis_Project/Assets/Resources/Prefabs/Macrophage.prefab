@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 33268023965461994}
   - component: {fileID: 23255753533954362}
   - component: {fileID: 135820159635030314}
+  - component: {fileID: 54475686255047606}
+  - component: {fileID: 114591596211228252}
   m_Layer: 9
   m_Name: claw
   m_TagString: Untagged
@@ -103,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 1344367902852374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children: []
   m_Father: {fileID: 4252597229352758}
   m_RootOrder: 1
@@ -234,6 +236,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207044892257452}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54475686255047606
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344367902852374}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &114591596211228252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344367902852374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15ca163717b8dc4fa187626550ceb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  macrophage: {fileID: 1207044892257452}
+  pathogenCathing: 0
+  pathogen: []
 --- !u!114 &114954837581355912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,7 +327,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1544308798842084}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1

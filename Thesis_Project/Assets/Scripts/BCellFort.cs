@@ -27,12 +27,15 @@ public class BCellFort : MonoBehaviour {
 
         timer += Time.deltaTime;
 
-        foreach (GameObject em in enemies.ToArray())
+        foreach (GameObject em in enemies.ToArray())//detect whether outside the range
         {
-            if (Vector3.Angle(transform.forward, em.transform.position - transform.position) > 45)
+            if (em != null)
             {
-                enemies.Remove(em.gameObject);
-                Debug.Log(enemies.Count);
+                if (Vector3.Angle(transform.forward, em.transform.position - transform.position) > 45)
+                {
+                    enemies.Remove(em.gameObject);
+                    Debug.Log(enemies.Count);
+                }
             }
         }
         //.Log(timer);
@@ -51,7 +54,7 @@ public class BCellFort : MonoBehaviour {
             timer = 0;
         }else if (immunity == 0)
         {
-            enemies.Remove(gameObject);
+            //enemies.Remove(gameObject);
             Destroy(gameObject);
             GameObject effect = transform.parent.Find("ReadyEffect").gameObject;
             effect.SetActive(true);
@@ -61,7 +64,7 @@ public class BCellFort : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) //detect whether inside the range
     {
         if (other.tag == "Pathogen")
         {
@@ -73,7 +76,8 @@ public class BCellFort : MonoBehaviour {
             }
         }
     }
-    private void OnTriggerExit(Collider other)
+
+    private void OnTriggerExit(Collider other) //detect whether outside the range
     {
         if (other.tag == "Pathogen")
         {

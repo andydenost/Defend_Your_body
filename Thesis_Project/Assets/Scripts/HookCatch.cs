@@ -18,7 +18,7 @@ public class HookCatch : MonoBehaviour {
     private Camera cam;
     Ray ray;
     RaycastHit hit;
-
+    
 	// Use this for initialization
 	void Start () {
         catchReady = true;

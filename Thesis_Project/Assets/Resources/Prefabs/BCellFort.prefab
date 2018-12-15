@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135215803772186950}
   - component: {fileID: 114970575053922258}
   - component: {fileID: 54782276936685534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BCellFort
   m_TagString: FortCell
   m_Icon: {fileID: 0}

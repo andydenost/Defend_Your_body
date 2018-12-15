@@ -8,8 +8,9 @@ public class PathogenScript : MonoBehaviour {
 
     //HP, ATK, ID
     public int HP;
-    public PathogenInfo PI;
-    Transform endPoint;
+    public int money;
+    public int ID;
+    //Transform endPoint;
     NavMeshAgent agent;
     public List<Transform> targetlist;
     List<Transform> mylist;
@@ -24,6 +25,7 @@ public class PathogenScript : MonoBehaviour {
         {
             mylist.Add(t);
         }
+        money = HP;
         //endPoint = GameObject.Find("SpineStage").transform;
     }
 	
@@ -31,8 +33,9 @@ public class PathogenScript : MonoBehaviour {
 	void Update () {
         if (mylist.Count == 0)
         {
-            Debug.Log("I am in the end");
+            //Debug.Log("I am in the end");
             Destroy(gameObject);
+            GameManager.GM.livePathoNum--;
         }
         else
         {
@@ -46,6 +49,52 @@ public class PathogenScript : MonoBehaviour {
        if( collision.gameObject.tag == "Organs")
         {
             mylist.Remove(collision.gameObject.transform);
+        }
+        if (collision.gameObject.tag == "Antigen")
+        {
+            HP = HP-GameManager.GM.BcellDamge;
+            if (HP>0)
+            {
+                gameObject.transform.localScale = 0.8f * transform.localScale;
+            }
+            else
+            {
+                Debug.Log("!!!");
+                GameManager.GM.BodyImmunity += money;
+                Destroy(gameObject);
+                GameManager.GM.livePathoNum--;
+
+            }
+        }
+
+        if (collision.gameObject.tag == "Neutrophil")
+        {
+            HP--;
+            if (HP>0)
+            {
+                gameObject.transform.localScale = 0.8f * transform.localScale;
+            }
+            else
+            {
+                GameManager.GM.BodyImmunity += money;
+                Destroy(gameObject);
+                GameManager.GM.livePathoNum--;
+            }
+        }
+
+        if (collision.gameObject.tag == "SuperAntigen")
+        {
+            HP = HP-2;
+            if (HP > 0)
+            {
+                gameObject.transform.localScale = 0.8f * transform.localScale;
+            }
+            else
+            {
+                GameManager.GM.BodyImmunity += money;
+                Destroy(gameObject);
+                GameManager.GM.livePathoNum--;
+            }
         }
     }
 }

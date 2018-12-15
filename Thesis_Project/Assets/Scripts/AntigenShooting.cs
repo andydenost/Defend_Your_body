@@ -38,7 +38,7 @@ public class AntigenShooting : MonoBehaviour {
     // Update is called once per frame
     void Update()
         {
-            antiRotate();
+           // antiRotate();
         }
 
        void antiRotate()

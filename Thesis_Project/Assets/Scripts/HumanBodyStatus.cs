@@ -12,6 +12,8 @@ public class HumanBodyStatus : MonoBehaviour {
     public int bodyImmunity;
     private float IHfactor;
 
+
+
     // Use this for initialization
 
     private void Awake()

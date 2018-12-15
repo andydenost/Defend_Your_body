@@ -9,6 +9,10 @@ TagManager:
   - Stage
   - EndPoint
   - Organs
+  - Antigen
+  - Neutrophil
+  - SuperAntigen
+  - Hook
   layers:
   - Default
   - TransparentFX
@@ -20,7 +24,7 @@ TagManager:
   - 
   - PostProcessing
   - Player
-  - Arms
+  - 
   - MiniMap
   - Food
   - BodyEnvironment
@@ -28,8 +32,8 @@ TagManager:
   - ImmuneCell
   - AntiFork
   - SpawnPoint
-  - 
-  - 
+  - Detector
+  - Duplicate
   - 
   - 
   - 

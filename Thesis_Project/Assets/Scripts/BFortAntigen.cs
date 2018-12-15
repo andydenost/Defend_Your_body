@@ -7,6 +7,8 @@ public class BFortAntigen : MonoBehaviour {
     public float antiSpeed;
     public GameObject explosionEffect;
     private Transform target;
+    
+
     public Transform Target
     {
         set
@@ -29,9 +31,12 @@ public class BFortAntigen : MonoBehaviour {
         }
         else
         {
-            transform.Translate(Vector3.forward * antiSpeed * Time.deltaTime);
+            Destroy(gameObject);
+            GameObject effect = Instantiate(explosionEffect, transform.position, transform.rotation);
+            Destroy(effect, 0.4f);
         }
-	}
+        
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -16,6 +16,10 @@ public class FortBuilder : MonoBehaviour {
     public float maxDistanceBuild;
 
     private int fortIndex;
+
+    public int moneyB;
+    public int moneyT;
+
     Ray ray;
     RaycastHit hit;
 	// Use this for initialization
@@ -41,7 +45,7 @@ public class FortBuilder : MonoBehaviour {
                 {
                     if (fortIndex == 0)
                     {
-                        if (hit.collider.name == "Fort1")
+                        if (hit.collider.name == "Fort1" && GameManager.GM.BodyImmunity >= moneyB)
                         {
                             GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
                             if (readyEffect.activeSelf == true)
@@ -51,7 +55,7 @@ public class FortBuilder : MonoBehaviour {
                                 readyEffect.SetActive(false);
                             }
                         }
-                        if (hit.collider.name == "Fort2")
+                        if (hit.collider.name == "Fort2" && GameManager.GM.BodyImmunity >= moneyB)
                         {
                             GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
                             if (readyEffect.activeSelf == true)
@@ -61,7 +65,7 @@ public class FortBuilder : MonoBehaviour {
                                 readyEffect.SetActive(false);
                             }
                         }
-                        if (hit.collider.name == "Fort3")
+                        if (hit.collider.name == "Fort3" && GameManager.GM.BodyImmunity >= moneyB)
                         {
                             GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
                             if (readyEffect.activeSelf == true)
@@ -71,7 +75,7 @@ public class FortBuilder : MonoBehaviour {
                                 readyEffect.SetActive(false);
                             }
                         }
-                        if (hit.collider.name == "Fort4")
+                        if (hit.collider.name == "Fort4" && GameManager.GM.BodyImmunity >= moneyB)
                         {
                             GameObject readyEffect = hit.collider.transform.GetChild(0).gameObject;// if ready effect is active then player could build the fort
                             if (readyEffect.activeSelf == true)
@@ -107,14 +111,28 @@ public class FortBuilder : MonoBehaviour {
     {
         if (index == 0)
         {
-            fortCell = BCellFort;
-            pos.y = pos.y + 0.8f;
+            if (GameManager.GM.BodyImmunity>=moneyB)
+            {
+                fortCell = BCellFort;
+                pos.y = pos.y + 0.8f;
+                GameObject f = Instantiate(fortCell, pos, Quaternion.LookRotation(dir, Vector3.up));
+                GameManager.GM.BodyImmunity -= moneyB;
+                f.transform.SetParent(hit.transform);
+            }
         }
+
         else if(index == 1){
-            fortCell = TCellFort;
-            pos.y = pos.y + 0.6f;
+            
+            if (GameManager.GM.BodyImmunity >= moneyT)
+            {
+                fortCell = TCellFort;
+                pos.y = pos.y + 0.6f;
+                GameObject f = Instantiate(fortCell, pos, Quaternion.LookRotation(dir, Vector3.up));
+                f.transform.SetParent(hit.transform);
+                f.GetComponent<GuardAntiAttack>().immunity = moneyT;
+                GameManager.GM.BodyImmunity -= moneyT;
+                
+            }
         }
-        GameObject f = Instantiate(fortCell, pos, Quaternion.LookRotation(dir,Vector3.up));
-        f.transform.SetParent(hit.transform);
     }
 }

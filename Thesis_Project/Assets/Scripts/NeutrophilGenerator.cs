@@ -7,9 +7,11 @@ public class NeutrophilGenerator : MonoBehaviour {
     Ray ray;
     RaycastHit hit;
     public GameObject Neutrophil;
+    public int moneyN;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         
 	}
 	
@@ -22,9 +24,13 @@ public class NeutrophilGenerator : MonoBehaviour {
             {
                 if (Input.GetKeyDown("q"))
                 {
-                    Vector3 neuPos = hit.point;
-                    neuPos.y = neuPos.y + 0.5f;
-                    Instantiate(Neutrophil, neuPos, transform.rotation);
+                    if (GameManager.GM.BodyImmunity >= moneyN)
+                    {
+                        Vector3 neuPos = hit.point;
+                        neuPos.y = neuPos.y + 0.5f;
+                        Instantiate(Neutrophil, neuPos, transform.rotation);
+                        GameManager.GM.BodyImmunity -= moneyN;
+                    }  
                 }
             }
         }

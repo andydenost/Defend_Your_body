@@ -11,9 +11,9 @@ public class Neutrophil : MonoBehaviour {
     private GameObject nearestEnemy;
     NavMeshAgent agent;
     public GameObject neuExpEffect;
-    
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         nearestDistance = detectRadius;
         agent = GetComponent<NavMeshAgent>();
         agent.enabled = false;

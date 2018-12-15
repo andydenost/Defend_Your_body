@@ -15,11 +15,15 @@ public class BCell : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
         if (Input.GetButtonDown("Fire1"))
         {
-            bullet = Instantiate(goBullet);
-            bullet.transform.position = transform.position;
+            if (GameManager.GM.BodyImmunity >= 1)
+            {
+                bullet = Instantiate(goBullet);
+                bullet.transform.position = transform.position;
+                GameManager.GM.BodyImmunity--;
+            }
+            
             //bullet.transform.parent = this.transform;
             //bullet.transform.SetParent(this.transform);
         }
