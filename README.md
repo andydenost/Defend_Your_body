@@ -7,20 +7,20 @@ I considered focusing on immune system, because many biological characteristics 
 ## My Characters
 After knowing these background knowledge, I was inspired to make these four immune cells as my game's roles. 
 ### B Cell
-B Cell can shoot antibody to the air. When the antibody to the air, it is like a Y character, which is the abstract feature of real antibody. When the antibody collide with pathogen, it will cause some damage to pathogen. The antibody stops and explodes only when it is hit with something.
+B Cell can shoot antibody to the air. When the antibody to the air, it is like a Y character, which is the abstract feature of real antibody. When the antibody collide with pathogen, it will cause some damage to pathogen. The antibody stops and explodes only when it is hit with something.  
 ![](Images/BCell.png)    
 ### T Cell
 It has a fork inside the body, when it meet an antibody, it will stab the fork into the enemy's body to cause a huge damage. In the real world in may looks like the picture, kind like full of forks on the surface of cell.
 ![](Images/T.png)  
 ### Macrophage
-Double size of B Cell and T Cell, it could also extend a part of his body like picture to catch the small pathogen. It just like a hook, to throw forward to catch a prey and pull back to get it. When it gets the pathogen, it will eat it and help B fort to upgrade its ATK.
+Double size of B Cell and T Cell, it could also extend a part of his body like picture to catch the small pathogen. It just like a hook, to throw forward to catch a prey and pull back to get it. When it gets the pathogen, it will eat it and help B fort to upgrade its ATK.  
 ![](Images/MCell.png)  
 ![](Images/MCellAttack.png)  
 ### Neutrophil
 The smallest one among the four immune cells. Just a white ball in my game. You can put it all most everywhere as a suicide guard. You can put multiple neutrophils at same time. And it will pounce on them when they see the pathogens.
 ![](Images/NCell.png)  
 ## Game Map
-The game map of my game is created refer to the human blood system and lymphatic system. All of people know how important the blood system is, but lymphatic system also take a great part of human circulatory system. Without it, our organ cannot be protected by immune cells. 
+The game map of my game is created refer to the human blood system and lymphatic system. All of people know how important the blood system is, but lymphatic system also take a great part of human circulatory system. Without it, our organ cannot be protected by immune cells.  
 ![](Images/GameMap.png)  
 So, my game map is consisting of two color roads. The red one represents blood system, and blue one represents lymphatic system. The Pathogens can only move on the blood roads.
 I have four lymph glands represented by the blue round platform. You can see four table on it. It is the stage of B Cell Fort. The reason why I set 4 of it of each platform is because they can cover every blood road in their shooting rage. 
