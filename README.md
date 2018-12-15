@@ -30,7 +30,7 @@ There is a magic circle near the players birth location. It is the position wher
 The pathogens have two ways to make an invasion, one is through stomach, the other is through lungs. Additionally, if they enter the organs of intestine, liver and pancrea and accumulate to four, it will duplicate one stronger pathogen. 
  
 ## Game Control
-W,A,S,D as position moving, mouse moving as sight moving. press TAB to change immune cells, press q to set a Neutrophil, press e to set a B Cell Fort, press r to set a T Cell Fort. Click left button on mouse to attack. 
+W,A,S,D as position moving, mouse moving as sight moving. press TAB to change immune cells, press q to set a Neutrophil, press e to set a B Cell Fort, press r to set a T Cell Fort. Click left button on mouse to attack. Press and hold m key to expand the minimap.  
 ## Play method
 ### Task
 Try to eliminate as many pathogens as you can, keep them away from the spine (which is your birth point). If the spine's blood bar goes down to blank, the game is over, the player loses the game. If you defend the spine until the last wave of pathogens, you win the game. 
