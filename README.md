@@ -7,24 +7,30 @@ I considered focusing on immune system, because many biological characteristics 
 ## My Characters
 After knowing these background knowledge, I was inspired to make these four immune cells as my game's roles. 
 ### B Cell
-![](Images/BCell.png)  
 B Cell can shoot antibody to the air. When the antibody to the air, it is like a Y character, which is the abstract feature of real antibody. When the antibody collide with pathogen, it will cause some damage to pathogen. The antibody stops and explodes only when it is hit with something.
+![](Images/BCell.png)    
 ### T Cell
 It has a fork inside the body, when it meet an antibody, it will stab the fork into the enemy's body to cause a huge damage. In the real world in may looks like the picture, kind like full of forks on the surface of cell.
+![](Images/T.png)  
 ### Macrophage
 Double size of B Cell and T Cell, it could also extend a part of his body like picture to catch the small pathogen. It just like a hook, to throw forward to catch a prey and pull back to get it. When it gets the pathogen, it will eat it and help B fort to upgrade its ATK.
+![](Images/MCell.png)  
+![](Images/MCellAttack.png)  
 ### Neutrophil
 The smallest one among the four immune cells. Just a white ball in my game. You can put it all most everywhere as a suicide guard. You can put multiple neutrophils at same time. And it will pounce on them when they see the pathogens.
+![](Images/NCell.png)  
 ## Game Map
 The game map of my game is created refer to the human blood system and lymphatic system. All of people know how important the blood system is, but lymphatic system also take a great part of human circulatory system. Without it, our organ cannot be protected by immune cells. 
+![](Images/GameMap.png)  
 So, my game map is consisting of two color roads. The red one represents blood system, and blue one represents lymphatic system. The Pathogens can only move on the blood roads.
 I have four lymph glands represented by the blue round platform. You can see four table on it. It is the stage of B Cell Fort. The reason why I set 4 of it of each platform is because they can cover every blood road in their shooting rage. 
+![](Images/LymphaGland.png)  
 There is a magic circle near the players birth location. It is the position where we can set T cell fort.
+![](Images/T.png)  
 The pathogens have two ways to make an invasion, one is through stomach, the other is through lungs. Additionally, if they enter the organs of intestine, liver and pancrea and accumulate to four, it will duplicate one stronger pathogen. 
-
+ 
 ## Game Control
 W,A,S,D as position moving, mouse moving as sight moving. press TAB to change immune cells, press q to set a Neutrophil, press e to set a B Cell Fort, press r to set a T Cell Fort. Click left button on mouse to attack. 
-
 ## Play method
 ### Task
 Try to eliminate as many pathogens as you can, keep them away from the spine (which is your birth point). If the spine's blood bar goes down to blank, the game is over, the player loses the game. If you defend the spine until the last wave of pathogens, you win the game. 
