@@ -7,7 +7,9 @@ I considered focusing on immune system, because many biological characteristics 
 ## My Characters
 After knowing these background knowledge, I was inspired to make these four immune cells as my game's roles. 
 ### B Cell
-![B](Images/BCell.png)
+
+![](Images/BCell.png)
+
 B Cell can shoot antibody to the air. When the antibody to the air, it is like a Y character, which is the abstract feature of real antibody. When the antibody collide with pathogen, it will cause some damage to pathogen. The antibody stops and explodes only when it is hit with something.
 ### T Cell
 It has a fork inside the body, when it meet an antibody, it will stab the fork into the enemy's body to cause a huge damage. In the real world in may looks like the picture, kind like full of forks on the surface of cell.
