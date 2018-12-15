@@ -51,3 +51,5 @@ It always has many bugs in the game. I solve most of them, but still some bugs I
 ## future
 I would like to rewrite some classes to make the structure more clearly. Also, as a kind of tower defense game. I need to focus on the level design, especially how to use something like XML to persist each level's data. If I know how to do, I will make the enemies waves more randomly, like the enemy A and B could show together, and the speed of them is different. 
 Furthermore, I am interested into make it as a VR game in HTC Vive platform. Try to make the models more real, and perhaps it could become an educational video game.
+## Game Introduction Video
+[Immune War](https://youtu.be/9Z0lEwg9t2M)
