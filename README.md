@@ -7,7 +7,6 @@ I considered focusing on immune system, because many biological characteristics 
 ## My Characters
 After knowing these background knowledge, I was inspired to make these four immune cells as my game's roles. 
 ### B Cell
-
 ![](Images/BCell.png)
 
 B Cell can shoot antibody to the air. When the antibody to the air, it is like a Y character, which is the abstract feature of real antibody. When the antibody collide with pathogen, it will cause some damage to pathogen. The antibody stops and explodes only when it is hit with something.
