@@ -48,7 +48,7 @@ Beside the pathogens need the function, the T Cell Fort and Neutrophil also need
 At the beginning, the minimap is not in the game plane, but when I start to play on the game, without minimap, it is hard to figure out where I am and where are the enemies. So I add a orthographic camera above the map, and project it to a raw image. Set it to a UI in canvas. Additionally, I made a minimap icon, then it is clear to see where I am.
 ## Postmortem
 It always has many bugs in the game. I solve most of them, but still some bugs I don't know how to figure out. For example, sometimes there are some enemies in the map, but it shows that it doesn't have any enemies in the scene. I don't know what cause the counter problem. However, I can realize I used too many broke data structure and format in my game. For example, I write too many singletons, and finally I find I don't need to do that. Also, there are too many unnecessary references and assignments. 
-## future
+## Future
 I would like to rewrite some classes to make the structure more clearly. Also, as a kind of tower defense game. I need to focus on the level design, especially how to use something like XML to persist each level's data. If I know how to do, I will make the enemies waves more randomly, like the enemy A and B could show together, and the speed of them is different. 
 Furthermore, I am interested into make it as a VR game in HTC Vive platform. Try to make the models more real, and perhaps it could become an educational video game.
 ## Game Introduction Video
