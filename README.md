@@ -59,3 +59,18 @@ Furthermore, I am interested into make it as a VR game in HTC Vive platform. Try
 ## Source Code
 [Github](https://github.com/andydenost/Immune_War/tree/master/Thesis_Project)  
 [Download Version](https://drive.google.com/file/d/1ZHIDeufLc3x-0VVuQSuILFnilV9QNT0i/view?usp=sharing)
+## Resources
+### Creative Commons
+[Blood Map Texture](https://www.maxpixel.net/0-Blood-Blood-Group-Rh-factor-Positive-2781421 )  
+[Lympha Map Texture](https://www.google.com/imgres?imgurl=https%3A%2F%2Fc1.staticflickr.com%2F4%2F3918%2F14663091603_76c660ac13_b.jpg&imgrefurl=https%3A%2F%2Fwww.flickr.com%2Fphotos%2F35441329%40N05%2F14663091603&docid=EdGQXE-_SeeG1M&tbnid=csoVnKQEUTuTaM%3A&vet=10ahUKEwjvwNKAuPzeAhUmxFQKHYFHB9AQMwg9KAAwAA..i&w=1024&h=576&itg=1&bih=754&biw=1536&q=lympha%20texture&ved=0ahUKEwjvwNKAuPzeAhUmxFQKHYFHB9AQMwg9KAAwAA&iact=mrc&uact=8)  
+[TCellFort Magic Circle](https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9e%2FThe_Red_Magic_Circle.gif&imgrefurl=https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2FFile%3AThe_Red_Magic_Circle.gif&docid=6lHm3IYXR_rMYM&tbnid=vt6zv9dyf2ikeM%3A&vet=10ahUKEwirzJeHrZffAhUshuAKHcbcBVoQMwhuKAcwBw..i&w=658&h=653&bih=754&biw=1536&q=magic%20circle%20png&ved=0ahUKEwirzJeHrZffAhUshuAKHcbcBVoQMwhuKAcwBw&iact=mrc&uact=8)  
+[Body Environment Texture](https://www.flickr.com/photos/filterforge/9348789777)  
+[Starting Background Image](https://www.google.com/imgres?imgurl=https%3A%2F%2Froundupreads.jsc.nasa.gov%2Fimages%2Fimagefull-1190.png&imgrefurl=https%3A%2F%2Froundupreads.jsc.nasa.gov%2Fpages.ashx%2F348%2FPrecision&docid=6BLnpN7K6N44oM&tbnid=7as5i2w7m1siQM%3A&vet=10ahUKEwjjzuyp5p_fAhWomuAKHefbCcMQMwiTASgdMB0..i&w=980&h=735&bih=754&biw=1536&q=Immune%20System&ved=0ahUKEwjjzuyp5p_fAhWomuAKHefbCcMQMwiTASgdMB0&iact=mrc&uact=8)  
+### Unity Assets Store
+[Organs Models](https://assetstore.unity.com/packages/3d/props/anatomic-pack-79612)  
+[Crosshairs](https://assetstore.unity.com/packages/2d/gui/icons/simple-modern-crosshairs-pack-1-79034)  
+### TurboSquid
+[Bacteria](https://www.turbosquid.com/FullPreview/Index.cfm/ID/362617)  
+[Virus](https://www.turbosquid.com/FullPreview/Index.cfm/ID/1341082)
+### Epidemic Sounds
+[Panic Room – Anders Ekengren](https://player.epidemicsound.com/search/?search_query=Panic%20Room#)  
