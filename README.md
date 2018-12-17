@@ -54,8 +54,8 @@ Furthermore, I am interested into make it as a VR game in HTC Vive platform. Try
 ## Game Introduction Video
 [Immune War](https://youtu.be/9Z0lEwg9t2M)  
 ## Download Game
-[Windows](https://github.com/andydenost/Immune_War/tree/master/WindowsVersion)  
-[Mac](https://github.com/andydenost/Immune_War/tree/master/MacVersion.app/Contents)  
+[Windows](Immune_War/HaoyunLi_Thesis_WindowsVersion.zip)  
+[Mac](Immune_War/HaoyunLi_Thesis_MacVersion.zip)  
 ## Source Code
 [Thesis Project](https://github.com/andydenost/Immune_War/tree/master/Thesis_Project)  
 
