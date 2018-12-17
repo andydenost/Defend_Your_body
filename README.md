@@ -57,5 +57,5 @@ Furthermore, I am interested into make it as a VR game in HTC Vive platform. Try
 [Windows](https://drive.google.com/file/d/1VSKzr1G5vJoW8P_OUVzR6iq0NiUxSjlo/view?usp=sharing)  
 [Mac](https://drive.google.com/file/d/1c5eiXeie0CsyC8gD1SXZUGWORgaWF3y9/view?usp=sharing)  
 ## Source Code
-[Thesis Project](https://github.com/andydenost/Immune_War/tree/master/Thesis_Project)  
-
+[Github](https://github.com/andydenost/Immune_War/tree/master/Thesis_Project)  
+[Download Version](https://drive.google.com/file/d/1ZHIDeufLc3x-0VVuQSuILFnilV9QNT0i/view?usp=sharing)
